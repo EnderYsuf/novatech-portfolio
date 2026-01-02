@@ -1,4 +1,3 @@
-/* ====== base ====== */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ===== HERO ===== */
+/* hero */
 .hero {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,7 @@ button:hover {
     height: 40%;
 }
 
-/* ===== ABOUT ===== */
+/* abt */
 .about {
     padding: 80px 10%;
     text-align: center;
@@ -73,7 +72,7 @@ button:hover {
     margin-bottom: 10px;
 }
 
-/* ===== PRODUCTS ===== */
+/* prods */
 .products {
     padding: 80px 10%;
     background: #f7faff;
@@ -92,7 +91,7 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* ===== TEAM ===== */
+/* team */
 .team {
     padding: 80px 10%;
     text-align: center;
@@ -111,7 +110,7 @@ button:hover {
     font-weight: 600;
 }
 
-/* ===== VACANCIES ===== */
+/* vacancies */
 .vacancies {
     padding: 80px 10%;
     background: #eef4ff;
@@ -128,7 +127,7 @@ button:hover {
 
 .vacancy-card {
     width: 270px;
-    min-height: 330px; /* чтобы высота карточек была одинаковой */
+    min-height: 330px;
     padding: 25px;
     background: #fff;
     border-radius: 12px;
@@ -155,7 +154,7 @@ button:hover {
 }
 
 .apply-btn {
-    margin-top: auto; /* кнопка уходит вниз */
+    margin-top: auto;
     display: block;
     text-align: center;
     padding: 10px 0;
@@ -171,7 +170,7 @@ button:hover {
     background: #365ed5;
 }
 
-/* ===== PROCESS ===== */
+/* process */
 .process {
     padding: 80px 10%;
     text-align: center;
@@ -184,7 +183,7 @@ button:hover {
     line-height: 2.4rem;
 }
 
-/* ===== FOOTER ===== */
+/* foot */
 footer {
     background: #111;
     color: white;
@@ -206,7 +205,7 @@ footer button {
     margin-left: 5px;
 }
 
-/* ================= Animations ================= */
+/* anims */
 section, .product-card, .vacancy-card, .member {
     opacity: 0;
     transform: translateY(40px);
@@ -216,40 +215,3 @@ section, .product-card, .vacancy-card, .member {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ================= Dark mode ================= */
-body.dark {
-    background: #0f1116;
-    color: #e4e4e4;
-}
-body.dark section {
-    background: #13151c;
-}
-body.dark footer {
-    background: #000;
-}
-body.dark .vacancy-card,
-body.dark .product-card {
-    background: #1a1d25;
-    color: #fff;
-}
-
-/* toggle button */
-.theme-btn {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    padding: 8px 14px;
-    background: #00000022;
-    backdrop-filter: blur(6px);
-    border-radius: 8px;
-    color: white;
-    font-size: .9rem;
-    border: 1px solid white;
-}
-body.dark .theme-btn { background:#ffffff22; }
-.theme-btn:hover { transform: scale(1.08); }
-
-/* light/dark coloring adjust */
-.dark a { color:#7FB0FF; }
-    
