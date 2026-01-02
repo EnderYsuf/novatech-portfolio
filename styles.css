@@ -1,0 +1,255 @@
+/* ====== base ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    background: #4A7EFF;
+    color: #fff;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4A7EFF, #7FC0FF);
+    color: #fff;
+    position: relative;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.hero svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 80px 10%;
+    text-align: center;
+}
+.about-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.about-icons .item {
+    width: 200px;
+}
+.about-icons .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+    padding: 80px 10%;
+    background: #f7faff;
+    text-align: center;
+}
+.product-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== TEAM ===== */
+.team {
+    padding: 80px 10%;
+    text-align: center;
+}
+.team-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.member {
+    background: #f0f4ff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ===== VACANCIES ===== */
+.vacancies {
+    padding: 80px 10%;
+    background: #eef4ff;
+    text-align: center;
+}
+
+.vacancy-list {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.vacancy-card {
+    width: 270px;
+    min-height: 330px; /* чтобы высота карточек была одинаковой */
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.vacancy-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.vacancy-card .subtitle {
+    margin: 12px 0 4px;
+    font-weight: 600;
+    color: #2f5fff;
+}
+
+.vacancy-card p {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.apply-btn {
+    margin-top: auto; /* кнопка уходит вниз */
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background: #4a7eff;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.apply-btn:hover {
+    background: #365ed5;
+}
+
+/* ===== PROCESS ===== */
+.process {
+    padding: 80px 10%;
+    text-align: center;
+    background: #ffffff;
+}
+.process ul {
+    margin-top: 20px;
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 50px 10%;
+}
+footer a {
+    color: #7FB0FF;
+}
+footer form {
+    margin: 12px 0;
+}
+footer input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+footer button {
+    margin-left: 5px;
+}
+
+/* ================= Animations ================= */
+section, .product-card, .vacancy-card, .member {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .7s ease;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= Dark mode ================= */
+body.dark {
+    background: #0f1116;
+    color: #e4e4e4;
+}
+body.dark section {
+    background: #13151c;
+}
+body.dark footer {
+    background: #000;
+}
+body.dark .vacancy-card,
+body.dark .product-card {
+    background: #1a1d25;
+    color: #fff;
+}
+
+/* toggle button */
+.theme-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 8px 14px;
+    background: #00000022;
+    backdrop-filter: blur(6px);
+    border-radius: 8px;
+    color: white;
+    font-size: .9rem;
+    border: 1px solid white;
+}
+body.dark .theme-btn { background:#ffffff22; }
+.theme-btn:hover { transform: scale(1.08); }
+
+/* light/dark coloring adjust */
+.dark a { color:#7FB0FF; }
+    
